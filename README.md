@@ -1,5 +1,5 @@
 # Description
-This repository contains modified packages and instructions how to automaticly calibrate two UR3 robot arms with RealSense camera using ROS.
+This repository contains modified packages and instructions how to automaticly calibrate two UR3 robot arms with RealSense camera using ROS Melodic.
 
 # Installation
 - install [RealSense for ROS](https://github.com/IntelRealSense/realsense-ros)
