@@ -2,6 +2,8 @@
 This repository contains modified packages and instructions how to automaticly calibrate two UR3 robot arms with RealSense camera using ROS.
 
 # Installation
+- install [RealSense for ROS](https://github.com/IntelRealSense/realsense-ros)
+
 - clone this repository into your catkin workspace:
 ```
 cd ~/catkin_ws/src  # replace with path to your workspace
@@ -18,4 +20,3 @@ rosdep install -iyr --from-paths src
 catkin_make_isolated
 ```
 
-- install RealSense2
