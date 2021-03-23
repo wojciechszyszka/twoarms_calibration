@@ -1,5 +1,5 @@
 # Description
-This repository contains modified packages and instructions how to use hand-eye calibration to automaticly calibrate two UR3 robot arms with RealSense camera using ROS Melodic.
+This repository contains modified packages and instructions how to use hand-eye calibration to automatically calibrate two UR3 robot arms with RealSense camera using ROS Melodic.
 
 # Installation
 - install [RealSense for ROS](https://github.com/IntelRealSense/realsense-ros)
@@ -34,8 +34,7 @@ The Tsai's hand-eye calibration can be used in two ways: eye-in-hand and eye-on-
 
 - Place the camera (tracking system) in a fixed position. Make sure it can see both arms.
 - Place different AprilTags on the end effector of each arm. The tags can be found [here](https://github.com/AprilRobotics/apriltag-imgs). Scale up the images in your favorite editor and print them out.
-
-
+- 
 
 
 
