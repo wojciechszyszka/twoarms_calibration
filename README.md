@@ -7,6 +7,7 @@ This repository contains modified packages and instructions how to automaticly c
 - clone this repository into your catkin workspace:
 ```
 cd ~/catkin_ws/src  # replace with path to your workspace
+source /opt/ros/melodic/setup.bash  # source your ROS distro 
 git clone https://github.com/wojciechszyszka/twoarms_calibration.git
 ```
 - satisfy dependencies
