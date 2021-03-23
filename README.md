@@ -3,7 +3,10 @@ This repository contains modified packages and instructions how to automaticly c
 
 # Installation
 - install [RealSense for ROS](https://github.com/IntelRealSense/realsense-ros)
-
+- install OpenCV
+```
+pip install opencv-python
+```
 - clone this repository into your catkin workspace:
 ```
 cd ~/catkin_ws/src  # replace with path to your workspace
