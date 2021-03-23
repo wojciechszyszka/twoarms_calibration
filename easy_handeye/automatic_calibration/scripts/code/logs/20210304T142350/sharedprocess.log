@@ -1,0 +1,4 @@
+[2021-03-04 14:23:53.791] [sharedprocess] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/putarms_ws/src/easy_handeye/automatic_calibration/scripts/code/User/snippets'
+[2021-03-04 14:23:53.963] [sharedprocess] [info] Deleted from disk ms-vscode.cpptools /root/.vscode/extensions/ms-vscode.cpptools-1.2.1
+[2021-03-04 14:23:53.968] [sharedprocess] [info] Deleted from disk ms-toolsai.jupyter /root/.vscode/extensions/ms-toolsai.jupyter-2021.2.576440691
+[2021-03-04 14:24:33.751] [sharedprocess] [info] Starting to clean up unused language packs.

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+  <name>two_putarms</name>
+  <version>0.1.0</version>
+  <description>The two_putarms package</description>
+  <author email="dominik.belter@put.poznan.pl">Dominik Belter</author>
+  <maintainer email="dominik.belter@put.poznan.pl">Dominik Belter</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>controller_manager</run_depend>
+  <run_depend>diff_drive_controller</run_depend>
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>gazebo_ros_control</run_depend>
+  <run_depend>joint_state_controller</run_depend>
+  <run_depend>position_controllers</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>rqt_robot_steering</run_depend>
+  <run_depend>rviz</run_depend>
+  <run_depend>urdf_tutorial</run_depend>
+  <run_depend>xacro</run_depend>
+
+</package>
