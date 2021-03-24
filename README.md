@@ -1,6 +1,12 @@
 # Description
 This repository contains modified packages and instructions how to use hand-eye calibration to automatically calibrate two UR3 robot arms with RealSense camera using ROS Melodic.
-
+## Used packages
+- [AprilTag](https://github.com/AprilRobotics/apriltag.git)
+- [apriltag_ros](https://github.com/AprilRobotics/apriltag_ros.git)
+- [ROS-Industrial Universal Robot](https://github.com/ros-industrial/universal_robot.git) 
+- [Universal_Robots_ROS_Driver](https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git)
+- [easy_handeye](https://github.com/IFL-CAMP/easy_handeye.git)
+- [ROS Wrapper for Intel® RealSense™ Devices](https://github.com/IntelRealSense/realsense-ros.git)
 # Installation
 - install [RealSense for ROS](https://github.com/IntelRealSense/realsense-ros)
 - install OpenCV
