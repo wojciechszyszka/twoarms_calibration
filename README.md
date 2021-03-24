@@ -37,9 +37,6 @@ The Tsai's hand-eye calibration can be used in two ways: eye-in-hand and eye-on-
 tag_family:        'tag36h11' # options: tagStandard52h13, tagStandard41h12, tag36h11, tag25h9, tag16h5, tagCustom48h12, tagCircle21h7, tagCircle49h12 
 ```
 Scale up the images in your favorite editor and print them out. Remember to measure the size of the tag. Change the size and ID of the tag in 'apriltag_ros/apriltag_ros/config/tags.yaml'. 
-- Place the camera (tracking system) in a fixed position. Make sure it can see both arms with ca. 40cm margin.
-- Position the robots, so that the tags are facing the camera.
-- Set IP adresses of robots in 'two_putarms/launch/calibrate.launch'
 ``` yaml
 standalone_tags:
   [
@@ -47,6 +44,13 @@ standalone_tags:
     {id: 1, size: 0.044, name: 'rightTag'}
   ]
   ```
+- Place the camera (tracking system) in a fixed position. Make sure it can see both arms with ca. 40cm margin.
+- Position the robots, so that the tags are facing the camera.
+- Set IP adresses of robots in 'two_putarms/launch/calibrate.launch'
+``` xml
+  <arg name="left_robot_ip"           default="150.254.47.149" />
+  <arg name="right_robot_ip"          default="150.254.47.193" />
+```
 - Run calibration launch file:
 ```
 roslaunch two_putarms calibrate.launch
