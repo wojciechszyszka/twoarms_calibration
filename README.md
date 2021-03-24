@@ -32,7 +32,11 @@ catkin_make_isolated
 
 The Tsai's hand-eye calibration can be used in two ways: eye-in-hand and eye-on-base. Since two arms are used, the more convenient variant is eye-on-base.
 
-- Place different AprilTags on the end effector of each arm. The tags can be found [here](https://github.com/AprilRobotics/apriltag-imgs). The default group is 'tag36h11'. It can be changed in the 'apriltag_ros/apriltag_ros/config/settings.yaml'. Scale up the images in your favorite editor and print them out. Remember to measure the size of the tag. Change the size and ID of the tag in 'apriltag_ros/apriltag_ros/config/tags.yaml'. 
+- Place different AprilTags on the end effector of each arm. The tags can be found [here](https://github.com/AprilRobotics/apriltag-imgs). The default group is 'tag36h11'. It can be changed in the 'apriltag_ros/apriltag_ros/config/settings.yaml'. 
+``` yaml
+tag_family:        'tag36h11' # options: tagStandard52h13, tagStandard41h12, tag36h11, tag25h9, tag16h5, tagCustom48h12, tagCircle21h7, tagCircle49h12 
+```
+Scale up the images in your favorite editor and print them out. Remember to measure the size of the tag. Change the size and ID of the tag in 'apriltag_ros/apriltag_ros/config/tags.yaml'. 
 - Place the camera (tracking system) in a fixed position. Make sure it can see both arms with ca. 40cm margin.
 - Position the robots, so that the tags are facing the camera.
 - Set IP adresses of robots in 'two_putarms/launch/calibrate.launch'
