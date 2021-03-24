@@ -40,6 +40,13 @@ Scale up the images in your favorite editor and print them out. Remember to meas
 - Place the camera (tracking system) in a fixed position. Make sure it can see both arms with ca. 40cm margin.
 - Position the robots, so that the tags are facing the camera.
 - Set IP adresses of robots in 'two_putarms/launch/calibrate.launch'
+``` yaml
+standalone_tags:
+  [
+    {id: 0, size: 0.044, name: 'leftTag'},
+    {id: 1, size: 0.044, name: 'rightTag'}
+  ]
+  ```
 - Run calibration launch file:
 ```
 roslaunch two_putarms calibrate.launch
