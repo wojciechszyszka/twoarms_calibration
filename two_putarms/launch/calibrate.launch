@@ -6,15 +6,13 @@
   <arg name="left_robot_ip"           default="150.254.47.149" />
   <arg name="right_robot_ip"          default="150.254.47.193" />
   <arg name="use_lowbandwidth_trajectory_follower" default="true" />
-  <!--<arg name="model" default="$(find two_putarms)/urdf/two_putarms.urdf.xacro"/>  -->
   <arg name="left_initial_position"   default="0.295"/>
   <arg name="right_initial_position"  default="-0.295"/>
-  <arg name="marker_size"             default="0.08"      doc="Size of the AprilTag used, in meters" />
   <arg name="left_marker_name"        default="leftTag"   doc="The name of the AprilTag used for left arm" />
   <arg name="right_marker_name"       default="rightTag"  doc="The name of the AprilTag used for right arm" />
   <arg name="namespace_prefix"        default="my_eob"    doc="Namespace prefix for calibration"/>
-  <arg name="start_rviz"              default="false"/>          
-  <arg name="rviz_config_file"        default="$(find two_putarms)/config/rviz_config.rviz" doc="the path to the rviz config file to be opened" />
+  <arg name="start_rviz"              default="false"	  doc="Set true to start rviz" />          
+  <arg name="rviz_config_file"        default="$(find two_putarms)/config/rviz_config.rviz" doc="The path to the rviz config file to be opened" />
 
   <!--node pkg="tf" type="static_transform_publisher" name="left_2_base" args="0 $(arg left_initial_position) 0.08 0 0 0 1 world left_arm_base_link 100" />
   <node pkg="tf" type="static_transform_publisher" name="right_2_base" args="0 $(arg right_initial_position) 0.08 0 0 0 1 world right_arm_base_link 100" /-->
