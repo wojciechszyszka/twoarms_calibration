@@ -19,7 +19,7 @@
 #   ]
 standalone_tags:
   [
-    {id: 0, size: 0.044, name: 'leftTag'},
+    {id: 16, size: 0.044, name: 'leftTag'},
     {id: 1, size: 0.044, name: 'rightTag'}
   ]
 # ## Tag bundle definitions

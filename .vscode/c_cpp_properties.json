@@ -1,0 +1,30 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/putarms_ws/devel_isolated/ur_msgs/include/**",
+        "/putarms_ws/devel_isolated/ur_driver/include/**",
+        "/putarms_ws/devel_isolated/ur_dashboard_msgs/include/**",
+        "/putarms_ws/devel_isolated/realsense2_camera/include/**",
+        "/putarms_ws/devel_isolated/easy_handeye_msgs/include/**",
+        "/putarms_ws/devel_isolated/apriltag_ros/include/**",
+        "/opt/ros/melodic/include/**",
+        "/putarms_ws/devel_isolated/apriltag/include/**",
+        "/putarms_ws/src/twoarms_calibration/apriltag_ros/apriltag_ros/include/**",
+        "/putarms_ws/src/twoarms_calibration/Universal_Robots_ROS_Driver/controller_stopper/include/**",
+        "/putarms_ws/src/realsense-ros/realsense2_camera/include/**",
+        "/putarms_ws/src/twoarms_calibration/Universal_Robots_ROS_Driver/ur_calibration/include/**",
+        "/putarms_ws/src/twoarms_calibration/Universal_Robots_ROS_Driver/ur_controllers/include/**",
+        "/putarms_ws/src/twoarms_calibration/universal_robot/ur_kinematics/include/**",
+        "/putarms_ws/src/twoarms_calibration/Universal_Robots_ROS_Driver/ur_robot_driver/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
