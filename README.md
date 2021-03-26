@@ -34,6 +34,10 @@ rosdep install -iyr --from-paths src
 catkin_make_isolated
 ```
 
+- source your workspace
+```
+source devel_isolated/setup.bash
+```
 # Usage
 
 The Tsai's hand-eye calibration can be used in two ways: eye-in-hand and eye-on-base. Since two arms are used, the more convenient variant is eye-on-base.
