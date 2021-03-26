@@ -65,7 +65,7 @@ standalone_tags:
 ```
 - Run calibration launch file:
 ```
-roslaunch two_putarms calibrate.launch
+roslaunch two_putarms auto_calibrate.launch
 ```
 - Wait for robots to finish movements. Now the console should display transform between camera and each arm. The tranforms are saved.
 - Exit the launch file and publish calculated tranforms in TF by running:
