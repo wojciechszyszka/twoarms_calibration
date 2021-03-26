@@ -10,10 +10,6 @@
   <xacro:ur3_robot prefix="left_arm_" joint_limited="true"/>
   <!-- right arm -->
   <xacro:ur3_robot prefix="right_arm_" joint_limited="true"/>
-
-  <!--<xacro:ur3_robot parent="left_shoulder_tip_link" name="left_arm" side="-1">
-    <origin xyz="0 0 0"  rpy= "0 0 0" />
-  </xacro:ur3_robot>-->
   
   <joint name="left_arm_shoulder" type="fixed">
     <parent link="world" />
