@@ -1,8 +1,0 @@
-[variant] Loaded new set of variants
-[kit] Detected kits definition version change from undefined to 2. Silently scanning for kits.
-[kit] Found Kit: GCC for c89 7.5.0
-[kit] Found Kit: GCC for c99 7.5.0
-[kit] Found Kit: GCC 7.5.0
-[kit] Found Kit: GCC 7.5.0
-[kit] Found Kit: GCC for x86_64-linux-gnu 7.5.0
-[kit] Found Kit: GCC for x86_64-linux-gnu 7.5.0
