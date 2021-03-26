@@ -5,7 +5,7 @@
     <include file="$(find realsense2_camera)/launch/rs_camera.launch" >
         <arg name="publish_tf" default="false" />
     </include>
-    <include file="$(find apriltag_ros)/launch/continuous_detection.launch">
+    <include file="$(find two_putarms)/launch/continuous_detection.launch">
         <arg name="camera_frame" value="camera_color_optical_frame"/>
         <arg name="camera_name" value="/camera/color" />
         <arg name="image_topic" value="image_raw" />

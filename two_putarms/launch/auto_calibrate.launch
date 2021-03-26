@@ -14,9 +14,7 @@
   <arg name="start_rviz"              default="true"	  doc="Set true to start rviz" />          
   <arg name="rviz_config_file"        default="$(find two_putarms)/config/rviz_config.rviz" doc="The path to the rviz config file to be opened" />
 
-  <!--node pkg="tf" type="static_transform_publisher" name="left_2_base" args="0 $(arg left_initial_position) 0.08 0 0 0 1 world left_arm_base_link 100" />
-  <node pkg="tf" type="static_transform_publisher" name="right_2_base" args="0 $(arg right_initial_position) 0.08 0 0 0 1 world right_arm_base_link 100" /-->
-  <node pkg="tf" type="static_transform_publisher" name="camera_2_world" args="0 0 1.5 0 0 0 1 world camera_link 100" />
+  <!--node pkg="tf" type="static_transform_publisher" name="camera_2_world" args="0 0 1.5 0 0 0 1 world camera_link 100" /-->
  
   <!-- Start RealSense (tracking system) -->
   <include file="$(find realsense2_camera)/launch/rs_camera.launch" />
