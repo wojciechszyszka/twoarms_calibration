@@ -13,8 +13,6 @@
   <arg name="namespace_prefix"        default="my_eob"    doc="Namespace prefix for calibration"/>
   <arg name="start_rviz"              default="true"	  doc="Set true to start rviz" />          
   <arg name="rviz_config_file"        default="$(find two_putarms)/config/rviz_config.rviz" doc="The path to the rviz config file to be opened" />
-
-  <!--node pkg="tf" type="static_transform_publisher" name="camera_2_world" args="0 0 1.5 0 0 0 1 world camera_link 100" /-->
  
   <!-- Start RealSense (tracking system) -->
   <include file="$(find realsense2_camera)/launch/rs_camera.launch" />
@@ -39,7 +37,7 @@
   </group>    
 
   <!-- Start right arm -->
-  <!--group ns="right_arm">
+  <group ns="right_arm">
     <include file="$(find ur_robot_driver)/launch/ur3_bringup.launch">
       <arg name="limited" default="$(arg limited)"/>
       <arg name="robot_ip" default="$(arg right_robot_ip)" />
@@ -55,7 +53,7 @@
       <arg name="sim" value="$(arg sim)"/>
       <arg name="tf_prefix" value="right_arm_" />
     </include>
-  </group-->
+  </group>
 
   <!-- Detecting tags and publishing ther TF frames -->
   <include file="$(find two_putarms)/launch/continuous_detection.launch">
@@ -82,7 +80,7 @@
   </include>
   
   <!-- Start calibration for right arm -->
-  <!--remap from="/right_arm/robot_description" to="/robot_description"/>
+  <remap from="/right_arm/robot_description" to="/robot_description"/>
 
   <include file="$(find two_putarms)/launch/handeye_calibrate.launch">
 	  <arg name="eye_on_hand" value="false"/>
@@ -96,7 +94,7 @@
 
     <arg name="tracking_base_frame" value="camera_color_optical_frame"/>
     <arg name="tracking_marker_frame" value="$(arg right_marker_name)"/>
-  </include-->
+  </include>
 
   <!-- Start rviz -->
   <node if="$(arg start_rviz)" name="$(anon rviz)" pkg="rviz" type="rviz" respawn="true"

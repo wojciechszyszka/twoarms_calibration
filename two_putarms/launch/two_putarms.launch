@@ -6,12 +6,11 @@
   <arg name="left_robot_ip"           default="150.254.47.197" />
   <arg name="right_robot_ip"          default="150.254.47.193" />
   <arg name="use_lowbandwidth_trajectory_follower" default="true" />
-  <!--<arg name="model" default="$(find two_putarms)/urdf/two_putarms.urdf.xacro"/>  -->
   <arg name="left_initial_position"   default="0.295"/>
-  <!--arg name="right_initial_position"  default="-0.295"/>
+  <arg name="right_initial_position"  default="-0.295"/>
 
-  <node pkg="tf" type="static_transform_publisher" name="left_2_base" args="0 $(arg left_initial_position) 0.08 0 0 0 1 world left_arm_base_link 100" />
-  <node pkg="tf" type="static_transform_publisher" name="right_2_base" args="0 $(arg right_initial_position) 0.08 0 0 0 1 world right_arm_base_link 100" /-->
+  <include file="$(find two_putarms)/launch/publish_calibration.launch" />
+  <include file="$(find realsense2_camera)/launch/rs_camera.launch" />
 
   <!-- Start left arm -->
   <group ns="left_arm">
@@ -33,7 +32,7 @@
   </group>    
 
   <!-- Start right arm -->
-  <!--group ns="right_arm">
+  <group ns="right_arm">
     <include file="$(find ur_robot_driver)/launch/ur3_bringup.launch">
       <arg name="limited" default="$(arg limited)"/>
       <arg name="robot_ip" default="$(arg right_robot_ip)" />
@@ -49,8 +48,6 @@
       <arg name="sim" value="$(arg sim)"/>
       <arg name="tf_prefix" value="right_arm_" />
     </include>
-  </group-->
-
-  
+  </group>
 
 </launch>

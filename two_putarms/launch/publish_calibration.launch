@@ -6,9 +6,9 @@
         <arg name="namespace_prefix" value="left"/> 
     </include>
 
-    <!--include file="$(find easy_handeye)/launch/publish.launch">
+    <include file="$(find easy_handeye)/launch/publish.launch">
         <arg name="eye_on_hand" value="false"/>
         <arg name="namespace_prefix" value="right"/> 
-    </include-->
+    </include>
 
 </launch>
