@@ -9,6 +9,8 @@ This repository contains modified packages and instructions how to use hand-eye 
 - [ROS Wrapper for Intel® RealSense™ Devices](https://github.com/IntelRealSense/realsense-ros.git)
 # Installation
 - install [RealSense for ROS](https://github.com/IntelRealSense/realsense-ros)
+- install [easy-handeye](https://github.com/IFL-CAMP/easy_handeye)
+- install [AprilTag](https://github.com/AprilRobotics/apriltag_ros)
 - install OpenCV
 ```
 pip install opencv-python
