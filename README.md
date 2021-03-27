@@ -57,7 +57,7 @@ standalone_tags:
   ]
   ```
 - Place the camera (tracking system) in a fixed position. Make sure it can see both arms with ca. 40cm margin.
-- Position the robots, so that the tags are facing the camera.
+- Position the robots, so that the tags are facing the camera. Make sure the joint angles are relatively close to zero, so they can move freely in both directions. This also applies to the last joint, even though it can be rotated infintely. Otherwise the easy-handeye packege will see the position of the robot as unsuitable for calibration.
 - Set IP adresses of robots in 'two_putarms/launch/calibrate.launch'
 ``` xml
   <arg name="left_robot_ip"           default="150.254.47.149" />
