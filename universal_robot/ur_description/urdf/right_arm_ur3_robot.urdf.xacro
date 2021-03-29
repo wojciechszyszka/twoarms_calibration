@@ -19,12 +19,18 @@
     initial_position="$(arg initial_position)"
   />
 
+  <xacro:property name="yaml_file" value="$(find ur_description)/urdf/final_transform.yaml" />
+  <xacro:property name="transform" value="${load_yaml(yaml_file)}"/>
+  <xacro:property name="x" value="${transform['x']}" />
+  <xacro:property name="y" value="${transform['y']}" />
+  <xacro:property name="z" value="${transform['z']}" />
+
   <link name="world" />
 
   <joint name="world_joint" type="fixed">
     <parent link="world" />
     <child link = "right_arm_base_link" />
-    <origin xyz="0.0 $(arg initial_position) 0.08" rpy="0.0 0.0 0.0" />
+    <origin xyz="${x} ${y} ${z + 0.08}" rpy="0.0 0.0 0.0" />
   </joint>
 
 </robot>

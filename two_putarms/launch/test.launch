@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find two_putarms)/launch/two_putarms.launch" />
+    <include file="$(find two_putarms)/launch/publish_calibration.launch" />
+    <include file="$(find realsense2_camera)/launch/rs_camera.launch" >
+        <arg name="publish_tf" default="false" />
+    </include>
+    <include file="$(find two_putarms)/launch/continuous_detection.launch">
+        <arg name="camera_frame" value="camera_color_optical_frame"/>
+        <arg name="camera_name" value="/camera/color" />
+        <arg name="image_topic" value="image_raw" />
+    </include>
+    <node name="test_calibration" pkg="rviz" type="rviz" respawn="false"
+          args="-d $(find two_putarms)/rviz/rviz_test_config.rviz " output="screen" />
+</launch>

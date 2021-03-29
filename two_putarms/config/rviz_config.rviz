@@ -123,11 +123,6 @@ Visualization Manager:
       Tree:
         world:
           left_arm_base_link:
-            camera_color_optical_frame:
-              leftTag:
-                {}
-              rightTag:
-                {}
             left_arm_base:
               left_arm_tool0_controller:
                 {}
@@ -181,7 +176,7 @@ Visualization Manager:
         Link Tree Style: Links in Alphabetic Order
       Name: RobotModel
       Robot Description: right_arm/robot_description
-      TF Prefix: ""
+      TF Prefix: right_arm_
       Update Interval: 0
       Value: true
       Visual Enabled: true
@@ -197,7 +192,7 @@ Visualization Manager:
         Link Tree Style: ""
       Name: RobotModel
       Robot Description: left_arm/robot_description
-      TF Prefix: ""
+      TF Prefix: left_arm_
       Update Interval: 0
       Value: true
       Visual Enabled: true

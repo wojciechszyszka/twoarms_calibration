@@ -1,14 +1,19 @@
 <?xml version="1.0"?>
 <launch>
+    <node name="calculate_transform" 
+            pkg="calculate_transform" 
+            type="calculate.py" 
+            output="screen" 
+            respawn="false" />
 
     <include file="$(find easy_handeye)/launch/publish.launch">
         <arg name="eye_on_hand" value="false"/>
         <arg name="namespace_prefix" value="left"/> 
     </include>
 
-    <include file="$(find easy_handeye)/launch/publish.launch">
+    <!--include file="$(find easy_handeye)/launch/publish.launch">
         <arg name="eye_on_hand" value="false"/>
         <arg name="namespace_prefix" value="right"/> 
-    </include>
+    </include-->
 
 </launch>

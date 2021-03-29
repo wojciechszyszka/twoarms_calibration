@@ -3,15 +3,13 @@
 <launch>
   <arg name="sim"                     default="false" />
   <arg name="limited"                 default="false"/>
-  <arg name="left_robot_ip"           default="150.254.47.149" />
+  <arg name="left_robot_ip"           default="150.254.47.197" />
   <arg name="right_robot_ip"          default="150.254.47.193" />
   <arg name="use_lowbandwidth_trajectory_follower" default="true" />
   <!--<arg name="model" default="$(find two_putarms)/urdf/two_putarms.urdf.xacro"/>  -->
-  <arg name="left_initial_position"   default="0.295"/>
-  <arg name="right_initial_position"  default="-0.295"/>
+  <arg name="left_initial_position"   default="0.0"/>
+  <arg name="right_initial_position"  default="0.0"/>
 
-  <node pkg="tf" type="static_transform_publisher" name="left_2_base" args="0 $(arg left_initial_position) 0.08 0 0 0 1 world left_arm_base_link 100" />
-  <node pkg="tf" type="static_transform_publisher" name="right_2_base" args="0 $(arg right_initial_position) 0.08 0 0 0 1 world right_arm_base_link 100" />
 
   <!-- Start left arm -->
   <group ns="left_arm">

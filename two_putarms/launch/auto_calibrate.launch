@@ -11,7 +11,7 @@
   <arg name="left_marker_name"        default="leftTag"   doc="The name of the AprilTag used for left arm" />
   <arg name="right_marker_name"       default="rightTag"  doc="The name of the AprilTag used for right arm" />
   <arg name="namespace_prefix"        default="my_eob"    doc="Namespace prefix for calibration"/>
-  <arg name="start_rviz"              default="false"	  doc="Set true to start rviz" />          
+  <arg name="start_rviz"              default="true"	  doc="Set true to start rviz" />          
   <arg name="rviz_config_file"        default="$(find two_putarms)/config/rviz_config.rviz" doc="The path to the rviz config file to be opened" />
 
 
@@ -73,7 +73,7 @@
     <arg name="move_group" value="left_arm" />
     <arg name="move_group_namespace" value="left_arm" />	
 
-    <arg name="robot_base_frame" value="left_arm_base_link"/>
+    <arg name="robot_base_frame" value="left_arm_base"/>
     <arg name="robot_effector_frame" value="left_arm_ee_link"/>
 
     <arg name="tracking_base_frame" value="camera_color_optical_frame"/>
@@ -90,7 +90,7 @@
     <arg name="move_group" value="right_arm" />
     <arg name="move_group_namespace" value="right_arm" />	
 
-    <arg name="robot_base_frame" value="right_arm_base_link"/>
+    <arg name="robot_base_frame" value="right_arm_base"/>
     <arg name="robot_effector_frame" value="right_arm_ee_link"/>
 
     <arg name="tracking_base_frame" value="camera_color_optical_frame"/>
