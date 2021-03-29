@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="sim"                     default="false" />
+  <arg name="limited"                 default="false"/>
+  <arg name="left_robot_ip"           default="150.254.47.149" />
+  <arg name="right_robot_ip"          default="150.254.47.193" />
+  <arg name="use_lowbandwidth_trajectory_follower" default="true" />
+  <!--<arg name="model" default="$(find two_putarms)/urdf/two_putarms.urdf.xacro"/>  -->
+  <arg name="left_initial_position"   default="0.295"/>
+  <arg name="right_initial_position"  default="-0.295"/>
+
+  <node pkg="tf" type="static_transform_publisher" name="left_2_base" args="0 $(arg left_initial_position) 0.08 0 0 0 1 world left_arm_base_link 100" />
+  <node pkg="tf" type="static_transform_publisher" name="right_2_base" args="0 $(arg right_initial_position) 0.08 0 0 0 1 world right_arm_base_link 100" />
+
+  <!-- Start left arm -->
+  <group ns="left_arm">
+    <include file="$(find ur_robot_driver)/launch/ur3_bringup.launch">
+      <arg name="limited" default="$(arg limited)"/>
+      <arg name="robot_ip" default="$(arg left_robot_ip)" />
+      <arg name="reverse_port" default="50001" />
+      <arg name="script_sender_port" default="50002" />
+      <arg name="tf_prefix" default="left_arm_" />
+      <arg name="headless_mode" default="true" />
+      <arg name="kinematics_config" default="$(find two_putarms)/config/calibration_kornelia.yaml" />
+      <arg name="initial_position" default="$(arg left_initial_position)"/>
+    </include>  
+    <include file="$(find ur3_moveit_config)/launch/ur3_moveit_planning_execution.launch">
+      <arg name="limited" value="$(arg limited)"/>
+      <arg name="sim" value="$(arg sim)"/>
+      <arg name="tf_prefix" value="left_arm_" />
+    </include>
+  </group>    
+
+  <!-- Start right arm -->
+  <group ns="right_arm">
+    <include file="$(find ur_robot_driver)/launch/ur3_bringup.launch">
+      <arg name="limited" default="$(arg limited)"/>
+      <arg name="robot_ip" default="$(arg right_robot_ip)" />
+      <arg name="reverse_port" default="50003" />
+      <arg name="script_sender_port" default="50004" />
+      <arg name="tf_prefix" default="right_arm_" />
+      <arg name="headless_mode" default="true" />
+      <arg name="kinematics_config" default="$(find two_putarms)/config/calibration_genowefa.yaml" />
+      <arg name="initial_position" default="$(arg right_initial_position)"/>
+    </include>
+    <include file="$(find ur3_moveit_config)/launch/ur3_moveit_planning_execution.launch">
+      <arg name="limited" value="$(arg limited)"/>
+      <arg name="sim" value="$(arg sim)"/>
+      <arg name="tf_prefix" value="right_arm_" />
+    </include>
+  </group>
+
+  
+
+</launch>

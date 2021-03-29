@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<robot name="two_putarms" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <link name="world"/>
+  
+  <!-- ur3 -->
+  <xacro:include filename="$(find ur_description)/urdf/ur3.urdf.xacro" />
+
+  <!-- left arm -->
+  <xacro:ur3_robot prefix="left_arm_" joint_limited="true"/>
+  <!-- right arm -->
+  <xacro:ur3_robot prefix="right_arm_" joint_limited="true"/>
+  
+  <joint name="left_arm_shoulder" type="fixed">
+    <parent link="world" />
+    <child link = "left_arm_base_link" />
+    <origin xyz="0.0 -0.45 0.25" rpy="0.0 0.0 0" />
+  </joint>
+  
+  <joint name="right_arm_shoulder" type="fixed">
+    <parent link="world" />
+    <child link = "right_arm_base_link" />
+    <origin xyz="0.0 0.45 0.25" rpy="0 0.0 0" />
+  </joint>
+  
+  <!-- puthand -->
+  <xacro:include filename="$(find puthand_driver)/description/urdf/puthand.urdf.xacro" />
+
+  <!-- left hand -->
+<!--  <xacro:puthand parent="left_arm_ee_link" name="puthand" prefix="left_">
+    <origin xyz="0 0 0"  rpy= "0 1.57 0" />
+  </xacro:puthand>-->
+  <!-- right hand -->
+<!--  <xacro:puthand parent="right_arm_ee_link" name="puthand" prefix="right_">
+    <origin xyz="0 0 0"  rpy= "0 1.57 0" />
+  </xacro:puthand>-->
+  
+<!--  <joint name="left_arm_wrist_joint" type="fixed">
+    <parent link="left_arm_ee_link" />
+    <child link = "left_puthand_base_link" />
+    <origin xyz="0.0 0. 0.0" rpy="0.0 1.57 0" />
+  </joint> 
+  
+  <joint name="right_arm_wrist_joint" type="fixed">
+    <parent link="right_arm_ee_link" />
+    <child link = "right_puthand_base_link" />
+    <origin xyz="0.0 0. 0.0" rpy="0.0 1.57 0" />
+  </joint>-->
+  
+  <!-- Gazebo plugin for ROS Control -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/</robotNamespace>
+    </plugin>
+  </gazebo>
+
+</robot>
